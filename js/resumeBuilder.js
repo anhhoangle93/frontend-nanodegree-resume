@@ -17,12 +17,12 @@ var bio = {
   "biopic": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAqbAAAAJGRkYWI3ZDg0LWY5NGYtNGE3OC1iOWZkLWY2ODVmYTg1ODZiYw.jpg",
 
   "display": function () {
-    var top = HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role)
+    var top = HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(top);
 
-    for (contact in bio.contacts) {
-      $("#topContacts").append(HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]))
-      $("#footerContacts").append(HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]))
+    for (var contact in bio.contacts) {
+      $("#topContacts").append(HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]));
+      $("#footerContacts").append(HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]));
     }
 
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
@@ -36,7 +36,7 @@ var bio = {
 
 
   }
-}
+};
 
 var education = {
   "schools": [
@@ -75,7 +75,7 @@ var education = {
       $(".education-entry:last").append(HTMLonlineURL.replace("%data%", course.url));
     });
   }
-}
+};
 
 var work = {
   "jobs": [
@@ -104,7 +104,7 @@ var work = {
       $(".work-entry:last").append(HTMLworkDescription.replace("%data%", job.description));
     });
   }
-}
+};
 
 var projects = {
   "projects": [
@@ -125,7 +125,7 @@ var projects = {
       $(".project-entry:last").append(HTMLprojectImage.replace("%data%", project.images));
     });
   }
-}
+};
 
 bio.display();
 work.display();
