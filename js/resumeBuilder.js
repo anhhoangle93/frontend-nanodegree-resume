@@ -8,13 +8,12 @@ var bio = {
         "mobile": "(415)xxx-xxxx",
         "email": "anhhoangle93@gmail.com",
         "github": "anhhoangle93",
-        // "twitter": "",
+        "twitter": "anhhoanletwitter",
         "location": "San Francisco"
     },
     "welcomeMessage": "Welcome to my page!",
     "skills": ["eDiscovery", "Data Loss Prevention", "Phishing Response", "Email Security", "Scripting (PowerShell, HTML, CSS, JavaScript)"],
     "biopic": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAqbAAAAJGRkYWI3ZDg0LWY5NGYtNGE3OC1iOWZkLWY2ODVmYTg1ODZiYw.jpg",
-
     "display": function() {
         var top = HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role);
         $("#header").prepend(top);
@@ -31,9 +30,6 @@ var bio = {
         bio.skills.forEach(function(skill) {
             $("#skills").append(HTMLskills.replace("%data%", skill));
         });
-
-
-
     }
 };
 
@@ -52,7 +48,6 @@ var education = {
         "dates": "2017",
         "url": "https://www.udacity.com/"
     }],
-
     "display": function() {
         education.schools.forEach(function(school) {
             $("#education").append(HTMLschoolStart);
@@ -88,7 +83,6 @@ var work = {
             "description": "Monitored privileged accounts, phishing education, security tools testing."
         }
     ],
-
     "display": function() {
         work.jobs.forEach(function(job) {
             $("#workExperience").append(HTMLworkStart);
@@ -105,9 +99,8 @@ var projects = {
         "title": "project 1",
         "dates": "2017",
         "description": "project description",
-        "images": ""
+        "images": "https://assets-cdn.github.com/images/modules/open_graph/github-mark.png"
     }],
-
     "display": function() {
         projects.projects.forEach(function(project) {
             $("#projects").append(HTMLprojectStart);
